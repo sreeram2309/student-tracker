@@ -1,0 +1,37 @@
+/* 1. Import the Poppins font from Google */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* 2. Force every single element in the app to use it */
+* {
+  font-family: 'Poppins', sans-serif !important;
+}
+
+
+:root {
+  --bg-main: #f4f7f6;
+  --bg-card: #ffffff;
+  --text-main: #333333;
+  --text-muted: #666666;
+  --border: #d9d9d9;
+  --border-light: #f0f0f0;
+  
+  /* Sidebar stays exactly the same in both modes! */
+  --sidebar-bg: #001529;
+  --sidebar-border: #002140;
+}
+
+body.dark-mode {
+  --bg-main: #121212;
+  --bg-card: #1e1e1e;
+  --text-main: #f5f5f5;
+  --text-muted: #a0a0a0;
+  --border: #444444;
+  --border-light: #333333;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  margin: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
