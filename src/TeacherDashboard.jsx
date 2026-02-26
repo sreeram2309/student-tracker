@@ -167,12 +167,12 @@ function TeacherDashboard() {
       </div>
       
       <div style={{ display: 'flex', gap: '20px', marginBottom: '30px' }}>
-        <div style={{ flex: 1, backgroundColor: 'var(--bg-card)', padding: '20px', borderRadius: '10px', boxShadow: '0 4px 6px rgba(0,0,0,0.05)' }}><h4 style={{ margin: '0 0 10px 0', color: 'var(--text-muted)' }}>Total Students</h4><h2 style={{ margin: 0, fontSize: '36px', color: '#6366f1' }}>{studentStats.length}</h2></div>
-        <div style={{ flex: 1, backgroundColor: 'var(--bg-card)', padding: '20px', borderRadius: '10px', boxShadow: '0 4px 6px rgba(0,0,0,0.05)' }}><h4 style={{ margin: '0 0 10px 0', color: 'var(--text-muted)' }}>Class Average</h4><h2 style={{ margin: 0, fontSize: '36px', color: classAverage >= 70 ? '#52c41a' : '#faad14' }}>{classAverage}%</h2></div>
-        <div style={{ flex: 1, backgroundColor: 'var(--bg-card)', padding: '20px', borderRadius: '10px', boxShadow: '0 4px 6px rgba(0,0,0,0.05)' }}><h4 style={{ margin: '0 0 10px 0', color: 'var(--text-muted)' }}>Students at Risk</h4><h2 style={{ margin: 0, fontSize: '36px', color: atRiskCount > 0 ? '#f5222d' : '#52c41a' }}>{atRiskCount}</h2></div>
+        <div style={{ flex: 1, backgroundColor: 'var(--bg-card)', padding: '20px', borderRadius: '10px', boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01)' }}><h4 style={{ margin: '0 0 10px 0', color: 'var(--text-muted)' }}>Total Students</h4><h2 style={{ margin: 0, fontSize: '36px', color: '#6366f1' }}>{studentStats.length}</h2></div>
+        <div style={{ flex: 1, backgroundColor: 'var(--bg-card)', padding: '20px', borderRadius: '10px', boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01)' }}><h4 style={{ margin: '0 0 10px 0', color: 'var(--text-muted)' }}>Class Average</h4><h2 style={{ margin: 0, fontSize: '36px', color: classAverage >= 70 ? '#52c41a' : '#faad14' }}>{classAverage}%</h2></div>
+        <div style={{ flex: 1, backgroundColor: 'var(--bg-card)', padding: '20px', borderRadius: '10px', boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01)' }}><h4 style={{ margin: '0 0 10px 0', color: 'var(--text-muted)' }}>Students at Risk</h4><h2 style={{ margin: 0, fontSize: '36px', color: atRiskCount > 0 ? '#f5222d' : '#52c41a' }}>{atRiskCount}</h2></div>
       </div>
       
-      <div style={{ backgroundColor: 'var(--bg-card)', padding: '20px', borderRadius: '10px', boxShadow: '0 4px 6px rgba(0,0,0,0.05)', marginBottom: '30px' }}>
+      <div style={{ backgroundColor: 'var(--bg-card)', padding: '20px', borderRadius: '10px', boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01)', marginBottom: '30px' }}>
         <h3 style={{ marginTop: 0, color: 'var(--text-main)' }}>Performance Overview</h3>
         <div style={{ width: '100%', height: 300 }}>
           <ResponsiveContainer>
@@ -187,7 +187,7 @@ function TeacherDashboard() {
         </div>
       </div>
       
-      <div style={{ backgroundColor: 'var(--bg-card)', padding: '20px', borderRadius: '10px', boxShadow: '0 4px 6px rgba(0,0,0,0.05)' }}>
+      <div style={{ backgroundColor: 'var(--bg-card)', padding: '20px', borderRadius: '10px', boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01)' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
           <h3 style={{ margin: 0, color: 'var(--text-main)' }}>Student Roster</h3>
           <input type="text" placeholder="🔍 Search students..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} style={{ padding: '8px 12px', borderRadius: '6px', border: '1px solid var(--border)', backgroundColor: 'var(--bg-main)', color: 'var(--text-main)', width: '250px' }} />
@@ -220,7 +220,7 @@ function TeacherDashboard() {
         <div><h1 style={{ margin: 0, color: 'var(--text-main)' }}>Assignments Manager</h1><p style={{ margin: 0, color: 'var(--text-muted)' }}>Create new assignments for your classes.</p></div>
         <button onClick={() => setIsAssessmentModalOpen(true)} style={{ padding: '12px 24px', backgroundColor: '#722ed1', color: 'white', border: 'none', borderRadius: '6px', cursor: 'pointer', fontWeight: 'bold' }}>➕ New Assignment</button>
       </div>
-      <div style={{ backgroundColor: 'var(--bg-card)', padding: '20px', borderRadius: '10px', boxShadow: '0 4px 6px rgba(0,0,0,0.05)' }}>
+      <div style={{ backgroundColor: 'var(--bg-card)', padding: '20px', borderRadius: '10px', boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01)' }}>
         <table style={{ width: '100%', borderCollapse: 'collapse' }}>
           <thead>
             <tr style={{ borderBottom: '2px solid var(--border-light)' }}>
@@ -248,7 +248,7 @@ function TeacherDashboard() {
   const renderReports = () => (
     <PageWrapper keyName="reports">
       <div style={{ marginBottom: '30px' }}><h1 style={{ margin: 0, color: 'var(--text-main)' }}>Analytics & Reports</h1><p style={{ margin: 0, color: 'var(--text-muted)' }}>Generate data exports for administrative review.</p></div>
-      <div style={{ backgroundColor: 'var(--bg-card)', padding: '30px', borderRadius: '10px', boxShadow: '0 4px 6px rgba(0,0,0,0.05)', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
+      <div style={{ backgroundColor: 'var(--bg-card)', padding: '30px', borderRadius: '10px', boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01)', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
         <div style={{ fontSize: '48px', marginBottom: '20px' }}>📑</div>
         <h2 style={{ margin: '0 0 10px 0', color: 'var(--text-main)' }}>Class Performance Export</h2>
         <p style={{ color: 'var(--text-muted)', maxWidth: '400px', marginBottom: '20px' }}>Download a complete, unformatted CSV file containing all current student averages and tracking statuses.</p>
@@ -260,7 +260,7 @@ function TeacherDashboard() {
   const renderSettings = () => (
     <PageWrapper keyName="settings">
       <div style={{ marginBottom: '30px' }}><h1 style={{ margin: 0, color: 'var(--text-main)' }}>Account Settings</h1><p style={{ margin: 0, color: 'var(--text-muted)' }}>Manage your profile and preferences.</p></div>
-      <div style={{ backgroundColor: 'var(--bg-card)', padding: '30px', borderRadius: '10px', boxShadow: '0 4px 6px rgba(0,0,0,0.05)', maxWidth: '500px' }}>
+      <div style={{ backgroundColor: 'var(--bg-card)', padding: '30px', borderRadius: '10px', boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01)', maxWidth: '500px' }}>
         <div style={{ marginBottom: '20px' }}><label style={{ display: 'block', marginBottom: '8px', fontWeight: 'bold', color: 'var(--text-main)' }}>Full Name</label><input type="text" disabled value={teacher.name} style={{ width: '100%', padding: '10px', backgroundColor: 'var(--bg-main)', border: '1px solid var(--border)', color: 'var(--text-main)', borderRadius: '6px' }} /></div>
         <div style={{ marginBottom: '20px' }}><label style={{ display: 'block', marginBottom: '8px', fontWeight: 'bold', color: 'var(--text-main)' }}>Email Address</label><input type="email" disabled value={teacher.email} style={{ width: '100%', padding: '10px', backgroundColor: 'var(--bg-main)', border: '1px solid var(--border)', color: 'var(--text-main)', borderRadius: '6px' }} /></div>
         <button onClick={() => toast('Settings updating feature coming soon!')} style={{ padding: '10px 20px', backgroundColor: 'transparent', color: '#6366f1', border: '1px solid #6366f1', borderRadius: '6px', cursor: 'pointer', fontWeight: 'bold' }}>Change Password</button>
