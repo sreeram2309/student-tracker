@@ -52,7 +52,7 @@ function Login() {
         <div style={{ marginTop: '30px', padding: '15px', backgroundColor: '#f9f9f9', borderRadius: '8px', fontSize: '13px', color: '#666' }}>
           <strong style={{ display: 'block', marginBottom: '8px' }}>Demo Accounts:</strong>
           <div>🧑‍🏫 Teacher: teacher@school.com / 123</div>
-          <div style={{ marginTop: '4px' }}>🎓 Student: alice@school.com / 123</div>
+          <div style={{ marginTop: '4px' }}>🎓 Student: arjun@school.com / 123</div>
         </div>
       </div>
     </div>
