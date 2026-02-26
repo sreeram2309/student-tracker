@@ -163,11 +163,11 @@ function TeacherDashboard() {
     <PageWrapper keyName="dashboard">
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '30px' }}>
         <div><h1 style={{ margin: 0, color: 'var(--text-main)' }}>Educator Portal</h1><p style={{ margin: 0, color: 'var(--text-muted)' }}>Logged in as {teacher.name}</p></div>
-        <button onClick={() => setIsGradeModalOpen(true)} style={{ padding: '12px 24px', backgroundColor: '#1890ff', color: 'white', border: 'none', borderRadius: '6px', cursor: 'pointer', fontWeight: 'bold' }}>➕ Grade Student</button>
+        <button onClick={() => setIsGradeModalOpen(true)} style={{ padding: '12px 24px', backgroundColor: '#6366f1', color: 'white', border: 'none', borderRadius: '6px', cursor: 'pointer', fontWeight: 'bold' }}>➕ Grade Student</button>
       </div>
       
       <div style={{ display: 'flex', gap: '20px', marginBottom: '30px' }}>
-        <div style={{ flex: 1, backgroundColor: 'var(--bg-card)', padding: '20px', borderRadius: '10px', boxShadow: '0 4px 6px rgba(0,0,0,0.05)' }}><h4 style={{ margin: '0 0 10px 0', color: 'var(--text-muted)' }}>Total Students</h4><h2 style={{ margin: 0, fontSize: '36px', color: '#1890ff' }}>{studentStats.length}</h2></div>
+        <div style={{ flex: 1, backgroundColor: 'var(--bg-card)', padding: '20px', borderRadius: '10px', boxShadow: '0 4px 6px rgba(0,0,0,0.05)' }}><h4 style={{ margin: '0 0 10px 0', color: 'var(--text-muted)' }}>Total Students</h4><h2 style={{ margin: 0, fontSize: '36px', color: '#6366f1' }}>{studentStats.length}</h2></div>
         <div style={{ flex: 1, backgroundColor: 'var(--bg-card)', padding: '20px', borderRadius: '10px', boxShadow: '0 4px 6px rgba(0,0,0,0.05)' }}><h4 style={{ margin: '0 0 10px 0', color: 'var(--text-muted)' }}>Class Average</h4><h2 style={{ margin: 0, fontSize: '36px', color: classAverage >= 70 ? '#52c41a' : '#faad14' }}>{classAverage}%</h2></div>
         <div style={{ flex: 1, backgroundColor: 'var(--bg-card)', padding: '20px', borderRadius: '10px', boxShadow: '0 4px 6px rgba(0,0,0,0.05)' }}><h4 style={{ margin: '0 0 10px 0', color: 'var(--text-muted)' }}>Students at Risk</h4><h2 style={{ margin: 0, fontSize: '36px', color: atRiskCount > 0 ? '#f5222d' : '#52c41a' }}>{atRiskCount}</h2></div>
       </div>
@@ -181,7 +181,7 @@ function TeacherDashboard() {
               <XAxis dataKey="name" tick={{ fill: 'var(--text-muted)' }} />
               <YAxis domain={[0, 100]} tick={{ fill: 'var(--text-muted)' }} />
               <Tooltip cursor={{ fill: 'var(--bg-main)' }} contentStyle={{ backgroundColor: 'var(--bg-card)', color: 'var(--text-main)', borderRadius: '8px', border: '1px solid var(--border)' }} />
-              <Bar dataKey="average" fill="#1890ff" radius={[4, 4, 0, 0]} />
+              <Bar dataKey="average" fill="#6366f1" radius={[4, 4, 0, 0]} />
             </BarChart>
           </ResponsiveContainer>
         </div>
@@ -203,7 +203,7 @@ function TeacherDashboard() {
           <tbody>
             {processedStudents.map((stat, index) => (
               <tr key={index} onClick={() => setSelectedStudentId(stat.id)} style={{ borderBottom: '1px solid var(--border-light)', cursor: 'pointer' }}>
-                <td style={{ padding: '16px', color: '#1890ff', fontWeight: 'bold' }}>{stat.name}</td>
+                <td style={{ padding: '16px', color: '#6366f1', fontWeight: 'bold' }}>{stat.name}</td>
                 <td style={{ padding: '16px', color: 'var(--text-muted)' }}>{stat.average}%</td>
                 <td style={{ padding: '16px' }}><span style={{ padding: '4px 10px', borderRadius: '12px', fontSize: '12px', fontWeight: 'bold', backgroundColor: stat.average >= 70 ? 'rgba(82, 196, 26, 0.1)' : 'rgba(245, 34, 45, 0.1)', color: stat.average >= 70 ? '#52c41a' : '#f5222d' }}>{stat.average >= 70 ? 'On Track' : 'Needs Support'}</span></td>
               </tr>
@@ -263,7 +263,7 @@ function TeacherDashboard() {
       <div style={{ backgroundColor: 'var(--bg-card)', padding: '30px', borderRadius: '10px', boxShadow: '0 4px 6px rgba(0,0,0,0.05)', maxWidth: '500px' }}>
         <div style={{ marginBottom: '20px' }}><label style={{ display: 'block', marginBottom: '8px', fontWeight: 'bold', color: 'var(--text-main)' }}>Full Name</label><input type="text" disabled value={teacher.name} style={{ width: '100%', padding: '10px', backgroundColor: 'var(--bg-main)', border: '1px solid var(--border)', color: 'var(--text-main)', borderRadius: '6px' }} /></div>
         <div style={{ marginBottom: '20px' }}><label style={{ display: 'block', marginBottom: '8px', fontWeight: 'bold', color: 'var(--text-main)' }}>Email Address</label><input type="email" disabled value={teacher.email} style={{ width: '100%', padding: '10px', backgroundColor: 'var(--bg-main)', border: '1px solid var(--border)', color: 'var(--text-main)', borderRadius: '6px' }} /></div>
-        <button onClick={() => toast('Settings updating feature coming soon!')} style={{ padding: '10px 20px', backgroundColor: 'transparent', color: '#1890ff', border: '1px solid #1890ff', borderRadius: '6px', cursor: 'pointer', fontWeight: 'bold' }}>Change Password</button>
+        <button onClick={() => toast('Settings updating feature coming soon!')} style={{ padding: '10px 20px', backgroundColor: 'transparent', color: '#6366f1', border: '1px solid #6366f1', borderRadius: '6px', cursor: 'pointer', fontWeight: 'bold' }}>Change Password</button>
       </div>
     </PageWrapper>
   );
@@ -320,7 +320,7 @@ function TeacherDashboard() {
 
                 <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '10px', marginTop: '10px' }}>
                   <button type="button" onClick={() => setIsGradeModalOpen(false)} style={{ padding: '10px 15px', backgroundColor: 'transparent', color: 'var(--text-main)', border: '1px solid var(--border)', borderRadius: '6px', cursor: 'pointer' }}>Cancel</button>
-                  <button type="submit" style={{ padding: '10px 15px', backgroundColor: '#1890ff', color: 'white', border: 'none', borderRadius: '6px', cursor: 'pointer', fontWeight: 'bold' }}>Save Grade</button>
+                  <button type="submit" style={{ padding: '10px 15px', backgroundColor: '#6366f1', color: 'white', border: 'none', borderRadius: '6px', cursor: 'pointer', fontWeight: 'bold' }}>Save Grade</button>
                 </div>
               </form>
             </motion.div>

@@ -30,7 +30,7 @@ function Sidebar({ role, onLogout, activeTab, setActiveTab }) {
   const getTabStyle = (tabName) => ({
     padding: '15px 25px', 
     cursor: 'pointer', 
-    backgroundColor: activeTab === tabName ? '#1890ff' : 'transparent', 
+    backgroundColor: activeTab === tabName ? '#6366f1' : 'transparent', 
     borderRight: activeTab === tabName ? '4px solid #fff' : 'none', 
     fontWeight: activeTab === tabName ? 'bold' : 'normal',
     opacity: activeTab === tabName ? 1 : 0.7,

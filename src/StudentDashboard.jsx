@@ -121,14 +121,14 @@ function StudentDashboard() {
       )}
       <div style={{ display: 'flex', gap: '20px', marginBottom: '30px' }}>
         <div style={{ flex: 1, backgroundColor: 'var(--bg-card)', padding: '20px', borderRadius: '10px', boxShadow: '0 4px 6px rgba(0,0,0,0.05)' }}><h4 style={{ margin: '0 0 10px 0', color: 'var(--text-muted)' }}>Overall Average</h4><h2 style={{ margin: 0, fontSize: '36px', color: overallAvg >= 70 ? '#52c41a' : '#f5222d' }}>{overallAvg}%</h2></div>
-        <div style={{ flex: 1, backgroundColor: 'var(--bg-card)', padding: '20px', borderRadius: '10px', boxShadow: '0 4px 6px rgba(0,0,0,0.05)' }}><h4 style={{ margin: '0 0 10px 0', color: 'var(--text-muted)' }}>Assessments Completed</h4><h2 style={{ margin: 0, fontSize: '36px', color: '#1890ff' }}>{myGrades.length}</h2></div>
+        <div style={{ flex: 1, backgroundColor: 'var(--bg-card)', padding: '20px', borderRadius: '10px', boxShadow: '0 4px 6px rgba(0,0,0,0.05)' }}><h4 style={{ margin: '0 0 10px 0', color: 'var(--text-muted)' }}>Assessments Completed</h4><h2 style={{ margin: 0, fontSize: '36px', color: '#6366f1' }}>{myGrades.length}</h2></div>
       </div>
       <div style={{ display: 'flex', gap: '20px', marginBottom: '30px', flexWrap: 'wrap' }}>
         <div style={{ flex: '2 1 500px', backgroundColor: 'var(--bg-card)', padding: '20px', borderRadius: '10px', boxShadow: '0 4px 6px rgba(0,0,0,0.05)' }}>
           <h3 style={{ marginTop: 0, color: 'var(--text-main)' }}>Progress Over Time</h3>
           <div style={{ width: '100%', height: 300 }}>
             <ResponsiveContainer>
-              <LineChart data={[...myGrades].reverse()}><CartesianGrid strokeDasharray="3 3" vertical={false} stroke="var(--border)" /><XAxis dataKey="testName" tick={{ fill: 'var(--text-muted)' }} /><YAxis domain={[0, 100]} tick={{ fill: 'var(--text-muted)' }} /><Tooltip contentStyle={{ backgroundColor: 'var(--bg-card)', color: 'var(--text-main)', borderRadius: '8px', border: '1px solid var(--border)' }} /><Line type="monotone" dataKey="percentage" stroke="#1890ff" strokeWidth={4} activeDot={{ r: 8 }} /></LineChart>
+              <LineChart data={[...myGrades].reverse()}><CartesianGrid strokeDasharray="3 3" vertical={false} stroke="var(--border)" /><XAxis dataKey="testName" tick={{ fill: 'var(--text-muted)' }} /><YAxis domain={[0, 100]} tick={{ fill: 'var(--text-muted)' }} /><Tooltip contentStyle={{ backgroundColor: 'var(--bg-card)', color: 'var(--text-main)', borderRadius: '8px', border: '1px solid var(--border)' }} /><Line type="monotone" dataKey="percentage" stroke="#6366f1" strokeWidth={4} activeDot={{ r: 8 }} /></LineChart>
             </ResponsiveContainer>
           </div>
         </div>
@@ -167,7 +167,7 @@ function StudentDashboard() {
       <div style={{ backgroundColor: 'var(--bg-card)', padding: '30px', borderRadius: '10px', boxShadow: '0 4px 6px rgba(0,0,0,0.05)', maxWidth: '500px' }}>
         <div style={{ marginBottom: '20px' }}><label style={{ display: 'block', marginBottom: '8px', fontWeight: 'bold', color: 'var(--text-main)' }}>Full Name</label><input type="text" disabled value={student.name} style={{ width: '100%', padding: '10px', backgroundColor: 'var(--bg-main)', border: '1px solid var(--border)', color: 'var(--text-main)', borderRadius: '6px' }} /></div>
         <div style={{ marginBottom: '20px' }}><label style={{ display: 'block', marginBottom: '8px', fontWeight: 'bold', color: 'var(--text-main)' }}>Student Email</label><input type="email" disabled value={student.email} style={{ width: '100%', padding: '10px', backgroundColor: 'var(--bg-main)', border: '1px solid var(--border)', color: 'var(--text-main)', borderRadius: '6px' }} /></div>
-        <button onClick={() => toast('Settings updating feature coming soon!')} style={{ padding: '10px 20px', backgroundColor: 'transparent', color: '#1890ff', border: '1px solid #1890ff', borderRadius: '6px', cursor: 'pointer', fontWeight: 'bold' }}>Change Password</button>
+        <button onClick={() => toast('Settings updating feature coming soon!')} style={{ padding: '10px 20px', backgroundColor: 'transparent', color: '#6366f1', border: '1px solid #6366f1', borderRadius: '6px', cursor: 'pointer', fontWeight: 'bold' }}>Change Password</button>
       </div>
     </PageWrapper>
   );
